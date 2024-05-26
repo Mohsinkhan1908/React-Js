@@ -22,11 +22,14 @@ const ReactElement = React.createElement(
   )
 
 ReactDOM.createRoot(document.getElementById('root')).render(
+  <>
   <App />
-  //ReactElement
-  // <AnotherElement />
-    // <MyApp/>
+  {/* //ReactElement */}
+   <AnotherElement />
+    <MyApp/>
     //MyApp() - works same but not suggested ,bad habit
+    </>
+    
     
 
 )
