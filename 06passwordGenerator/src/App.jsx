@@ -19,19 +19,21 @@ function App() {
     setPassword(pass)
 
   },
-  [length, numberAllowed, charAllowed, setPassword] )
+  [length, numberAllowed, charAllowed, setPassword])
+
   useEffect( ()=>{
     passwordGenerator()
   },
-  [length , numberAllowed , charAllowed , passwordGenerator] )
+  [length , numberAllowed , charAllowed , passwordGenerator])
+
   const copyPasswordToClipboard = ()=>{
     passwordRef.current?.select()
     passwordRef.current?.setSelectionRange(0,15)
     window.navigator.clipboard.writeText(password)
   }
   return (
-    < >
-    <div className="w-screen max-w-md flex justify-center my-8 px-4 py-3 text-centre shadow-md rounded-lg bg-gray-500 ">
+    <>
+    <div className="w-screen max-w-md flex justify-center my-8 px-4 py-3 text-center shadow-md rounded-lg bg-gray-500 ">
       <div className="">
     <h1 className='text-2xl mb-4'>Password Generator</h1>
     <div className="flex shadow rounded-lg overflow-hidden mb-4">
@@ -56,7 +58,7 @@ function App() {
         max={100}
         value={length}
          className='cursor-pointer'
-         onChange={(e) => {setLength(e.target.value)}}
+         onChange={(e) => setLength(e.target.value)}
           />
           <label>Length: {length}</label>
       </div>
