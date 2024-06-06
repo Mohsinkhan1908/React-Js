@@ -13,6 +13,7 @@ function App() {
   const lightTheme = () => {
     setThemeMode('light')
   }
+// Actual change in theme.
 
   useEffect(()=>{
     const html = document.querySelector('html');
