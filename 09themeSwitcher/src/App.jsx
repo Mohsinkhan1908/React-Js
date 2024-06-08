@@ -19,6 +19,7 @@ function App() {
     const html = document.querySelector('html');
     html.classList.remove('light','dark')
     html.classList.add(themeMode)
+    // html.classList.toggle(themeMode) --- not working
   },[themeMode])
 
   return (
